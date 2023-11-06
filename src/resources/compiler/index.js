@@ -16,8 +16,8 @@ class Compiler {
         const code = javascriptGenerator.workspaceToCode(workspace);
         const headerCode = [
             `/*`,
-            `   This extension was made with FreshPenguin112's fork of TurboBuilder${window.location.includes("-freshpenguin112.vercel.app") ? "(Development preview" : ""}!`,
-            `   ${window.location}`,
+            `   This extension was made with FreshPenguin112's fork of TurboBuilder!`,
+            `   https://fresh-turbobuilder.vercel.app`,
             `*/`,
             `(function (Scratch) {`,
             `const variables = {};`
