@@ -17,7 +17,7 @@ class Compiler {
         // Change info if this is the development preview
         var dev = "";
         if (window.location.includes("-freshpenguin112.vercel.app")) {
-            dev = "(Development preview)"
+            dev = "(Development preview)";
         }
         const headerCode = [
             `/*`,
