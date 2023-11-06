@@ -14,14 +14,9 @@ class Compiler {
      */
     compile(workspace, extensionMetadata, imageStates) {
         const code = javascriptGenerator.workspaceToCode(workspace);
-        // Change info if this is the development preview
-        var dev = "";
-        if (window.location.includes("-freshpenguin112.vercel.app")) {
-            dev = "(Development preview)";
-        }
         const headerCode = [
             `/*`,
-            `   This extension was made with FreshPenguin112's fork of TurboBuilder${dev}!`,
+            `   This extension was made with FreshPenguin112's fork of TurboBuilder${window.location.includes("-freshpenguin112.vercel.app") ? "(Development preview" : ""}!`,
             `   ${window.location}`,
             `*/`,
             `(function (Scratch) {`,
