@@ -17,7 +17,7 @@ class Compiler {
         const headerCode = [
             `/*`,
             `   This extension was made with FreshPenguin112's fork of TurboBuilder!`,
-            `   https://fresh-turbobuilder.vercel.app`,
+            `   https://frturbobuilder.vercel.app`,
             `*/`,
             `(function (Scratch) {`,
             `const variables = {};`
