@@ -14,11 +14,10 @@ class Compiler {
      */
     compile(workspace, extensionMetadata, imageStates) {
         const code = javascriptGenerator.workspaceToCode(workspace);
-        alert(typeof window);
         const headerCode = [
             `/*`,
-            `   This extension was made with FreshPenguin112's fork of TurboBuilder!`,
-            `   https://frturbobuilder.vercel.app`,
+            `   This extension was made with FreshPenguin112's fork of TurboBuilder${window.location.href.includes("-freshpenguin112.") ? "(Development preview)" : ""}!`,
+            `   ${window.location.href}`,
             `*/`,
             `(function (Scratch) {`,
             `const variables = {};`
