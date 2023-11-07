@@ -62,6 +62,25 @@ function register() {
         const code = block.getFieldValue('STATE');
         return [code, javascriptGenerator.ORDER_NONE];
     })
+    registerBlock(`${categoryPrefix}exactlyequals`, {
+        message0: '%1 equals %2 exactly?',
+        args0: [
+            {
+                "type": "field_value",
+                "name": "VALUE1",
+            },
+            {
+                "type": "field_value",
+                "name": "VALUE2",
+            }
+        ],
+        output: "Boolean",
+        inputsInline: true,
+        colour: categoryColor
+    }, (block) => {
+        const code = `${block.getFieldValue('VALUE1')} === ${block.getFieldValue('VALUE2')}`
+        return [code, javascriptGenerator.ORDER_NONE];
+    })
     
 }
 
