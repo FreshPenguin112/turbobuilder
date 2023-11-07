@@ -66,12 +66,12 @@ function register() {
         message0: '%1 equals %2 exactly?',
         args0: [
             {
-                "type": "input_value",
+                "type": "input_text",
                 "name": "VALUE1",
                 "text": "Foo"
             },
             {
-                "type": "input_value",
+                "type": "input_text",
                 "name": "VALUE2",
                 "text": "Bar"
             }
