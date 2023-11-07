@@ -14,6 +14,7 @@ class Compiler {
      */
     compile(workspace, extensionMetadata, imageStates) {
         const code = javascriptGenerator.workspaceToCode(workspace);
+        alert(typeof window);
         const headerCode = [
             `/*`,
             `   This extension was made with FreshPenguin112's fork of TurboBuilder!`,
