@@ -116,7 +116,7 @@
         }
         // set state
         dispatch("completed", state);
-        visible = false;
+        visible = true;
     }
     function cancel() {
         dispatch("cancel");
