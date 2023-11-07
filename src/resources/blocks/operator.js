@@ -12,7 +12,7 @@ function register() {
             {
                 "type": "field_number",
                 "name": "NUMBER",
-                "value": 0
+                "value": 123
             }
         ],
         output: "Number",
@@ -30,7 +30,7 @@ function register() {
             {
                 "type": "field_input",
                 "name": "TEXT",
-                "text": ""
+                "text": "foobar"
             }
         ],
         output: "String",
