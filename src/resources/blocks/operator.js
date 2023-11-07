@@ -80,7 +80,9 @@ function register() {
         inputsInline: true,
         colour: categoryColor
     }, (block) => {
-        const code = `${block.getFieldValue('VALUE1')} === ${block.getFieldValue('VALUE2')}`
+        const VALUE1 = javascriptGenerator.valueToCode(block, 'VALUE1', javascriptGenerator.ORDER_ATOMIC);
+        const VALUE2 = javascriptGenerator.valueToCode(block, 'VALUE2', javascriptGenerator.ORDER_ATOMIC)
+        const code = `${VALUE1} === ${VALUE2}`
         return [code, javascriptGenerator.ORDER_NONE];
     })
     
