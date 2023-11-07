@@ -67,13 +67,11 @@ function register() {
         args0: [
             {
                 "type": "input_value",
-                "name": "VALUE1",
-                "text": "Foo"
+                "name": "VALUE1"
             },
             {
                 "type": "input_value",
-                "name": "VALUE2",
-                "text": "Bar"
+                "name": "VALUE2"
             }
         ],
         output: "Boolean",
