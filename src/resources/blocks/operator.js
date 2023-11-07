@@ -68,10 +68,12 @@ function register() {
             {
                 "type": "field_value",
                 "name": "VALUE1",
+                "text": ""
             },
             {
                 "type": "field_value",
                 "name": "VALUE2",
+                "text": ""
             }
         ],
         output: "Boolean",
