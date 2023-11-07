@@ -3,4 +3,7 @@
         <block type="control_ifthen" />
         <block type="control_ifthenelse" />
     </category>
+    <category name="Operators" colour="#59C059">
+        <block type="operator_boolean" />
+    </category>
 </xml>
