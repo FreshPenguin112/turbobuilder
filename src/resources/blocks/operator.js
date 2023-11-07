@@ -7,7 +7,7 @@ const categoryColor = '#59C059';
 function register() {
     // number
     registerBlock(`${categoryPrefix}number`, {
-        message0: ' %1 ',
+        message0: ' ⠀%1 ⠀',
         args0: [
             {
                 "type": "field_number",
@@ -25,7 +25,7 @@ function register() {
     })
     // text
     registerBlock(`${categoryPrefix}text`, {
-        message0: ' %1 ',
+        message0: ' ⠀%1 ⠀',
         args0: [
             {
                 "type": "field_input",
