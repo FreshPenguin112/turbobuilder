@@ -20,7 +20,7 @@ function register() {
         colour: categoryColor
     }, (block) => {
         const NUMBER = block.getFieldValue('NUMBER');
-        const code = `Number(${NUMBER})`;
+        const code = `${NUMBER}`;
         return [code, javascriptGenerator.ORDER_NONE];
     })
     // text
@@ -38,7 +38,7 @@ function register() {
         colour: categoryColor
     }, (block) => {
         const TEXT = block.getFieldValue('TEXT');
-        const code = `String(${JSON.stringify(TEXT)})`;
+        const code = `${JSON.stringify(TEXT)}`;
         return [code, javascriptGenerator.ORDER_NONE];
     })
     // boolean
@@ -80,7 +80,7 @@ function register() {
     }, (block) => {
         const VALUE1 = javascriptGenerator.valueToCode(block, 'VALUE1', javascriptGenerator.ORDER_ATOMIC);
         const VALUE2 = javascriptGenerator.valueToCode(block, 'VALUE2', javascriptGenerator.ORDER_ATOMIC)
-        const code = `${VALUE1} === ${VALUE2}`
+        const code = `(${VALUE1 || 0} === ${VALUE2 || 0})`
         return [code, javascriptGenerator.ORDER_NONE];
     })
     
