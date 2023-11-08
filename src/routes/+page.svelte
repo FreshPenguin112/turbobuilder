@@ -99,7 +99,7 @@
         },
     };
 
-    window.workspaceg = null;
+    window.workspaceg = "";
     let compiler;
     let projectName = "";
     let projectID = "";
