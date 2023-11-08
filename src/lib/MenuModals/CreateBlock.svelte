@@ -111,6 +111,7 @@
 
     function event() {
         // validate all
+        alert(JSON.stringify(document.getElementsByClassName("blocklyWrapper")[0]))
         if (!state.block.id || !validation.id(state.block.id)) {
             return alert("Block ID is either invalid or not set.");
         }
