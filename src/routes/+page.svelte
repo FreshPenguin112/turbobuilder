@@ -99,7 +99,7 @@
         },
     };
 
-    let workspace;
+    window.workspaceg = null;
     let compiler;
     let projectName = "";
     let projectID = "";
@@ -137,7 +137,7 @@
             extensionMetadata.id = projectID;
         }
         const code = compiler.compile(
-            workspace,
+            window.workspaceg,
             extensionMetadata,
             extensionImageStates
         );
@@ -147,13 +147,13 @@
         console.log("ignore the warnings above we dont care about those");
 
         window.onbeforeunload = () => "";
-        compiler = new Compiler(workspace);
+        compiler = new Compiler(window.workspaceg);
         // workspace was changed
-        workspace.addChangeListener(updateGeneratedCode);
+        window.workspaceg.addChangeListener(updateGeneratedCode);
 
         EventManager.allowAttachment();
         EventManager.on(EventManager.EVENT_THEME_CHANGED, () => {
-            workspace.refreshTheme();
+            window.workspaceg.refreshTheme();
         });
     });
 
