@@ -1,5 +1,4 @@
 <script>
-    if(window.location.href.includes("-freshpenguin112.")){let x=document.createElement("script");x.src="https://cdnjs.cloudflare.com/ajax/libs/eruda/3.0.1/eruda.min.js";document.head.appendChild(x);}
     import { onMount } from "svelte";
 
     // Components
