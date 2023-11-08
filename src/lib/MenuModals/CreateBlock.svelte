@@ -115,7 +115,7 @@
             return alert("Block ID is either invalid or not set.");
         }
         // set state
-        alert(JSON.stringify(Blockly.getMainWorkspace()));
+        //alert(JSON.stringify(state));
         dispatch("completed", state);
         visible = false;
     }
