@@ -137,7 +137,7 @@
             extensionMetadata.id = projectID;
         }
         const code = compiler.compile(
-            window.workspaceg,
+            workspaceg,
             extensionMetadata,
             extensionImageStates
         );
@@ -147,13 +147,13 @@
         console.log("ignore the warnings above we dont care about those");
 
         window.onbeforeunload = () => "";
-        compiler = new Compiler(window.workspaceg);
+        compiler = new Compiler(workspaceg);
         // workspace was changed
-        window.workspaceg.addChangeListener(updateGeneratedCode);
+        workspaceg.addChangeListener(updateGeneratedCode);
 
         EventManager.allowAttachment();
         EventManager.on(EventManager.EVENT_THEME_CHANGED, () => {
-            window.workspaceg.refreshTheme();
+            workspaceg.refreshTheme();
         });
     });
 
@@ -410,7 +410,7 @@
                 </div>
             </div>
             <div class="blocklyWrapper">
-                <BlocklyComponent {config} locale={en} bind:workspace />
+                <BlocklyComponent {config} locale={en} bind:workspaceg />
             </div>
         </div>
         <div class="row-submenus">
