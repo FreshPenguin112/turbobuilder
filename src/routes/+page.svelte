@@ -104,7 +104,6 @@
     let projectName = "";
     let projectID = "";
     let lastGeneratedCode = "";
-    setTimeout(()=>alert(JSON.stringify(workspace)), 3000);
     const extensionImageStates = {
         icon: {
             failed: false,
@@ -314,6 +313,7 @@
     const ModalState = {
         extensionColors: false,
     };
+    alert(workspace);
 </script>
 
 <CreateBlockModal
