@@ -110,7 +110,7 @@
     let state = getDefaultState();
 
     function event() {
-        alert(typeof workspaceg);
+        alert(typeof window.workspaceg);
         // validate all
         //alert(JSON.stringify(document.getElementById("workspace")));
         if (!state.block.id || !validation.id(state.block.id)) {
