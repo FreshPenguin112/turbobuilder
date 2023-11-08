@@ -111,7 +111,7 @@
 
     function event() {
         // validate all
-        alert(JSON.stringify(Object.keys(document.getElementsByClassName("blocklyWrapper")[0])))
+        alert(JSON.stringify(document.getElementById("workspace")));
         if (!state.block.id || !validation.id(state.block.id)) {
             return alert("Block ID is either invalid or not set.");
         }
@@ -164,7 +164,7 @@
         </div>
         <div class="modal-content">
             <div class="blockly-wrapper">
-                <BlocklyComponent {config} locale={en} bind:workspace />
+                <BlocklyComponent id="workspace" {config} locale={en} bind:workspace />
             </div>
             <div class="button-space">
                 <input
