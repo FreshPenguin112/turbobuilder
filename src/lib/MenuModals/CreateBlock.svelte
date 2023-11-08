@@ -143,7 +143,8 @@
         block.setEditable(false);
         block.setMovable(false);
         block.setDeletable(false);
-        console.log(block);
+        //console.log(block);
+        alert(JSON.stringify(block));
 
         // center
         workspace.centerOnBlock(block.id, true);
