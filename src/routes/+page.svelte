@@ -313,7 +313,6 @@
     const ModalState = {
         extensionColors: false,
     };
-    alert(workspace);
 </script>
 
 <CreateBlockModal
