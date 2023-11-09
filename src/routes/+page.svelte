@@ -52,13 +52,13 @@
     import registerCore from "../resources/blocks/core.js";
     import registerControl from "../resources/blocks/control.js";
     import registerOperators from "../resources/blocks/operator.js";
-    //import registerVariables from "../resources/blocks/variables.js";
-    //import registerDebug from "../resources/blocks/debug.js";
+    import registerVariables from "../resources/blocks/variables.js";
+    import registerDebug from "../resources/blocks/debug.js";
     registerCore();
     registerControl();
     registerOperators();
-    //registerVariables();
-    //registerDebug();
+    registerVariables();
+    registerDebug();
     
     const en = {
         rtl: false,
