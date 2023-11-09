@@ -50,11 +50,13 @@
     import registerControl from "../resources/blocks/control.js";
     import registerOperators from "../resources/blocks/operator.js";
     import registerVariables from "../resources/blocks/variables.js";
+    import registerBlocks from "../resources/blocks/blocks.js";
     import registerDebug from "../resources/blocks/debug.js";
     registerCore();
     registerControl();
     registerOperators();
     registerVariables();
+    registerBlocks();
     registerDebug();
     
     const en = {
