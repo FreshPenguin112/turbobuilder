@@ -48,7 +48,6 @@
     // Blocks
     import registerGeneric from "../resources/blocks/generic.js";
     registerGeneric();
-    
     import registerCore from "../resources/blocks/core.js";
     import registerControl from "../resources/blocks/control.js";
     import registerOperators from "../resources/blocks/operator.js";
