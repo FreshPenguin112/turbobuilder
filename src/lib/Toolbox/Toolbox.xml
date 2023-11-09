@@ -8,6 +8,8 @@
         <block type="operator_number" />
         <block type="operator_boolean" />
         <block type="operator_exactlyequals" />
+        <block type="operator_join" />
+        <block type="operator_plus" />
     </category>
     <category name="Variables" colour="#FF8C1A">
         <block type="variable_set" />

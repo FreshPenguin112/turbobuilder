@@ -83,6 +83,48 @@ function register() {
         const code = `(${VALUE1 || 0} === ${VALUE2 || 0})`
         return [code, javascriptGenerator.ORDER_NONE];
     })
+    registerBlock(`${categoryPrefix}join`, {
+        message0: 'join %1 , %2',
+        args0: [
+            {
+                "type": "input_value",
+                "name": "VALUE1"
+            },
+            {
+                "type": "input_value",
+                "name": "VALUE2"
+            }
+        ],
+        output: "String",
+        inputsInline: true,
+        colour: categoryColor
+    }, (block) => {
+        const VALUE1 = javascriptGenerator.valueToCode(block, 'VALUE1', javascriptGenerator.ORDER_ATOMIC);
+        const VALUE2 = javascriptGenerator.valueToCode(block, 'VALUE2', javascriptGenerator.ORDER_ATOMIC)
+        const code = `(${String(VALUE1) || ""} + ${String(VALUE2) || ""})`
+        return [code, javascriptGenerator.ORDER_NONE];
+    })
+    registerBlock(`${categoryPrefix}plus`, {
+        message0: '%1 + %2',
+        args0: [
+            {
+                "type": "input_value",
+                "name": "VALUE1"
+            },
+            {
+                "type": "input_value",
+                "name": "VALUE2"
+            }
+        ],
+        output: "Boolean",
+        inputsInline: true,
+        colour: categoryColor
+    }, (block) => {
+        const VALUE1 = javascriptGenerator.valueToCode(block, 'VALUE1', javascriptGenerator.ORDER_ATOMIC);
+        const VALUE2 = javascriptGenerator.valueToCode(block, 'VALUE2', javascriptGenerator.ORDER_ATOMIC)
+        const code = `(${Number(VALUE1) || 0} + ${Number(VALUE2) || 0})`
+        return [code, javascriptGenerator.ORDER_NONE];
+    })
     
 }
 
