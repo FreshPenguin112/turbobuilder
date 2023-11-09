@@ -25,7 +25,6 @@
     import EventManager from "../resources/events";
     
     import Blockly from "blockly/core";
-    window.bb = Blockly;
     import * as ContinuousToolboxPlugin from "@blockly/continuous-toolbox";
     const Theme = Blockly.Theme.defineTheme("BasicTheme", {
         base: Blockly.Themes.Classic,
@@ -105,6 +104,7 @@
     let projectName = "";
     let projectID = "";
     let lastGeneratedCode = "";
+    window.bb = Blockly;
     const extensionImageStates = {
         icon: {
             failed: false,
