@@ -1,7 +1,7 @@
 <xml>
     <category name="Control" colour="#FFAB19">
-        <block type="control_ifthen" />
-        <block type="control_ifthenelse" />
+        <block type="control_if" />
+        <block type="control_ifelse" />
     </category>
     <category name="Operators" colour="#59C059">
         <block type="operator_text" />
