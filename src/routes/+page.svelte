@@ -1,5 +1,6 @@
 <script>
     import { onMount } from "svelte";
+    import("../lib/index.js");
     
     // Components
     import NavigationBar from "$lib/NavigationBar/NavigationBar.svelte";
