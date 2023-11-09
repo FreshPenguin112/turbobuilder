@@ -63,7 +63,7 @@ function register() {
     })
     // alert, alert("you stupid")
     registerBlock(`${categoryPrefix}alert`, {
-        message0: 'error %1',
+        message0: 'alert %1',
         args0: [
             {
                 "type": "input_value",
