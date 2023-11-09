@@ -81,7 +81,7 @@ function register() {
     }, (block) => {
         const VALUE1 = javascriptGenerator.valueToCode(block, 'VALUE1', javascriptGenerator.ORDER_ATOMIC);
         const VALUE2 = javascriptGenerator.valueToCode(block, 'VALUE2', javascriptGenerator.ORDER_ATOMIC)
-        const code = `(${VALUE1 || 0} === ${VALUE2 || 0})`
+        const code = `(${VALUE1 || 0} == ${VALUE2 || 0})`
         return [code, javascriptGenerator.ORDER_NONE];
     })
     // exactlyequals, x === y
