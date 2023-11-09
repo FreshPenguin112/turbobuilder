@@ -9,7 +9,6 @@
         <block type="operator_boolean" />
         <block type="operator_exactlyequals" />
     </category>
-    <!--
     <category name="Variables" colour="#FF8C1A">
         <block type="variable_set" />
         <block type="variable_get" />
@@ -22,5 +21,5 @@
         <sep gap="48"></sep>
         <block type="debug_rawblock" />
         <block type="debug_raw" />
-    </category>-->
+    </category>
 </xml>
