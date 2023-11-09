@@ -104,7 +104,7 @@
     let projectName = "";
     let projectID = "";
     let lastGeneratedCode = "";
-    globalThis.bb = Blockly;
+    globalThis.b = Blockly;
     const extensionImageStates = {
         icon: {
             failed: false,
