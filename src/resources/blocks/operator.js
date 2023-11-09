@@ -125,7 +125,7 @@ function register() {
     }, (block) => {
         const VALUE1 = javascriptGenerator.valueToCode(block, 'VALUE1', javascriptGenerator.ORDER_ATOMIC);
         const VALUE2 = javascriptGenerator.valueToCode(block, 'VALUE2', javascriptGenerator.ORDER_ATOMIC)
-        const code = `(${String(VALUE1) || ""} + ${String(VALUE2) || ""})`
+        const code = `(${String(VALUE1) || '""'} + ${String(VALUE2) || '""'})`
         return [code, javascriptGenerator.ORDER_NONE];
     })
     // plus, 0.5 + 1.5
