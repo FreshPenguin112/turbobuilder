@@ -5,7 +5,7 @@ const categoryPrefix = 'debug_';
 const categoryColor = '#666666';
 
 function register() {
-    // console.log
+    // log, console.log("hello")
     registerBlock(`${categoryPrefix}log`, {
         message0: 'log %1',
         args0: [
@@ -24,7 +24,7 @@ function register() {
         return `${code}\n`;
     })
 
-    // console.warn
+    // warn, console.warn("whats 9 plus 10")
     registerBlock(`${categoryPrefix}warn`, {
         message0: 'warn %1',
         args0: [
@@ -43,7 +43,7 @@ function register() {
         return `${code}\n`;
     })
 
-    // console.error
+    // error, console.error("21")
     registerBlock(`${categoryPrefix}error`, {
         message0: 'error %1',
         args0: [
@@ -59,6 +59,24 @@ function register() {
     }, (block) => {
         const LOG = javascriptGenerator.valueToCode(block, 'LOG', javascriptGenerator.ORDER_ATOMIC);
         const code = `console.error(${LOG});`;
+        return `${code}\n`;
+    })
+    // alert, alert("you stupid")
+    registerBlock(`${categoryPrefix}alert`, {
+        message0: 'error %1',
+        args0: [
+            {
+                "type": "input_value",
+                "name": "LOG"
+            }
+        ],
+        previousStatement: null,
+        nextStatement: null,
+        inputsInline: true,
+        colour: categoryColor
+    }, (block) => {
+        const LOG = javascriptGenerator.valueToCode(block, 'LOG', javascriptGenerator.ORDER_ATOMIC);
+        const code = `alert(${LOG});`;
         return `${code}\n`;
     })
 

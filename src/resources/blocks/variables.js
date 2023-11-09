@@ -5,7 +5,7 @@ const categoryPrefix = 'variable_';
 const categoryColor = '#FF8C1A';
 
 function register() {
-    // set variable
+    // set, variables["foo"] = "bar"
     registerBlock(`${categoryPrefix}set`, {
         message0: 'set %1 to %2',
         args0: [
@@ -31,7 +31,7 @@ function register() {
         return `${code}\n`;
     })
 
-    // get variable
+    // get, variables["foo"]
     registerBlock(`${categoryPrefix}get`, {
         message0: 'get %1',
         args0: [
