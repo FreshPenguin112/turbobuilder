@@ -415,7 +415,7 @@ on:cancel={() => {
         {config}
         locale={en}
         bind:workspace
-        on:change={()=>{window.wg = workspace}}
+        on:change={()=>{globalThis.bb = workspace}}
         />
     </div>
 </div>
