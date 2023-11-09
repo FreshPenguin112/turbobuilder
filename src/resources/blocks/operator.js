@@ -116,7 +116,7 @@ function register() {
                 "name": "VALUE2"
             }
         ],
-        output: "Boolean",
+        output: "Number",
         inputsInline: true,
         colour: categoryColor
     }, (block) => {
@@ -126,7 +126,7 @@ function register() {
         return [code, javascriptGenerator.ORDER_NONE];
     })
     registerBlock(`${categoryPrefix}minus`, {
-        message0: '%1 + %2',
+        message0: '%1 - %2',
         args0: [
             {
                 "type": "input_value",
@@ -137,7 +137,7 @@ function register() {
                 "name": "VALUE2"
             }
         ],
-        output: "Boolean",
+        output: "Number",
         inputsInline: true,
         colour: categoryColor
     }, (block) => {
@@ -147,7 +147,7 @@ function register() {
         return [code, javascriptGenerator.ORDER_NONE];
     })
     registerBlock(`${categoryPrefix}times`, {
-        message0: '%1 + %2',
+        message0: '%1 * %2',
         args0: [
             {
                 "type": "input_value",
@@ -158,7 +158,7 @@ function register() {
                 "name": "VALUE2"
             }
         ],
-        output: "Boolean",
+        output: "Number",
         inputsInline: true,
         colour: categoryColor
     }, (block) => {
@@ -168,7 +168,7 @@ function register() {
         return [code, javascriptGenerator.ORDER_NONE];
     })
     registerBlock(`${categoryPrefix}divide`, {
-        message0: '%1 + %2',
+        message0: '%1 / %2',
         args0: [
             {
                 "type": "input_value",
@@ -179,7 +179,7 @@ function register() {
                 "name": "VALUE2"
             }
         ],
-        output: "Boolean",
+        output: "Number",
         inputsInline: true,
         colour: categoryColor
     }, (block) => {
@@ -189,7 +189,7 @@ function register() {
         return [code, javascriptGenerator.ORDER_NONE];
     })
     registerBlock(`${categoryPrefix}exponent`, {
-        message0: '%1 + %2',
+        message0: '%1 ^ %2',
         args0: [
             {
                 "type": "input_value",
@@ -200,7 +200,7 @@ function register() {
                 "name": "VALUE2"
             }
         ],
-        output: "Boolean",
+        output: "Number",
         inputsInline: true,
         colour: categoryColor
     }, (block) => {
