@@ -20,7 +20,9 @@ class Compiler {
             `   ${window.location.href}`,
             `*/`,
             `(function (Scratch) {`,
-            `const variables = {};`
+            `const variables = {};`,
+            `const blocks = [];`,
+            `const menus = [];`,
         ];
         const classRegistry = {
             top: [
@@ -67,7 +69,7 @@ class Compiler {
 
         return [].concat(headerCode, classRegistry.top, [
             `getInfo() {`,
-            `return ${JSON.stringify(classRegistry.extensionInfo)}`,
+            `return ${JSON.stringify(classRegistry.extensionInfo).substring(0, JSON.stringify(classRegistry.extensionInfo).length - 1) + ', "blocks": blocks }'}`,
             `}`,
         ], classRegistry.bottom, code, footerCode).join('\n');
     }
