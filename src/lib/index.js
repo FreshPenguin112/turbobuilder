@@ -1,1 +1,2 @@
 // place files you want to import through the `$lib` alias in this folder.
+globalThis.makeblock = x => {b.Xml.appendDomToWorkspace(new DOMParser().parseFromString(`<block type="${x}" />`, "text/xml"), bb)}
