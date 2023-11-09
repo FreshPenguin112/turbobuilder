@@ -10,6 +10,10 @@
         <block type="operator_exactlyequals" />
         <block type="operator_join" />
         <block type="operator_plus" />
+        <block type="operator_minus" />
+        <block type="operator_times" />
+        <block type="operator_divide" />
+        <block type="operator_exponent" />
     </category>
     <category name="Variables" colour="#FF8C1A">
         <block type="variable_set" />

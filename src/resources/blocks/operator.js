@@ -125,6 +125,90 @@ function register() {
         const code = `(${Number(VALUE1) || 0} + ${Number(VALUE2) || 0})`
         return [code, javascriptGenerator.ORDER_NONE];
     })
+    registerBlock(`${categoryPrefix}minus`, {
+        message0: '%1 + %2',
+        args0: [
+            {
+                "type": "input_value",
+                "name": "VALUE1"
+            },
+            {
+                "type": "input_value",
+                "name": "VALUE2"
+            }
+        ],
+        output: "Boolean",
+        inputsInline: true,
+        colour: categoryColor
+    }, (block) => {
+        const VALUE1 = javascriptGenerator.valueToCode(block, 'VALUE1', javascriptGenerator.ORDER_ATOMIC);
+        const VALUE2 = javascriptGenerator.valueToCode(block, 'VALUE2', javascriptGenerator.ORDER_ATOMIC)
+        const code = `(${Number(VALUE1) || 0} - ${Number(VALUE2) || 0})`
+        return [code, javascriptGenerator.ORDER_NONE];
+    })
+    registerBlock(`${categoryPrefix}times`, {
+        message0: '%1 + %2',
+        args0: [
+            {
+                "type": "input_value",
+                "name": "VALUE1"
+            },
+            {
+                "type": "input_value",
+                "name": "VALUE2"
+            }
+        ],
+        output: "Boolean",
+        inputsInline: true,
+        colour: categoryColor
+    }, (block) => {
+        const VALUE1 = javascriptGenerator.valueToCode(block, 'VALUE1', javascriptGenerator.ORDER_ATOMIC);
+        const VALUE2 = javascriptGenerator.valueToCode(block, 'VALUE2', javascriptGenerator.ORDER_ATOMIC)
+        const code = `(${Number(VALUE1) || 0} * ${Number(VALUE2) || 0})`
+        return [code, javascriptGenerator.ORDER_NONE];
+    })
+    registerBlock(`${categoryPrefix}divide`, {
+        message0: '%1 + %2',
+        args0: [
+            {
+                "type": "input_value",
+                "name": "VALUE1"
+            },
+            {
+                "type": "input_value",
+                "name": "VALUE2"
+            }
+        ],
+        output: "Boolean",
+        inputsInline: true,
+        colour: categoryColor
+    }, (block) => {
+        const VALUE1 = javascriptGenerator.valueToCode(block, 'VALUE1', javascriptGenerator.ORDER_ATOMIC);
+        const VALUE2 = javascriptGenerator.valueToCode(block, 'VALUE2', javascriptGenerator.ORDER_ATOMIC)
+        const code = `(${Number(VALUE1) || 0} / ${Number(VALUE2) || 0})`
+        return [code, javascriptGenerator.ORDER_NONE];
+    })
+    registerBlock(`${categoryPrefix}exponent`, {
+        message0: '%1 + %2',
+        args0: [
+            {
+                "type": "input_value",
+                "name": "VALUE1"
+            },
+            {
+                "type": "input_value",
+                "name": "VALUE2"
+            }
+        ],
+        output: "Boolean",
+        inputsInline: true,
+        colour: categoryColor
+    }, (block) => {
+        const VALUE1 = javascriptGenerator.valueToCode(block, 'VALUE1', javascriptGenerator.ORDER_ATOMIC);
+        const VALUE2 = javascriptGenerator.valueToCode(block, 'VALUE2', javascriptGenerator.ORDER_ATOMIC)
+        const code = `(${Number(VALUE1) || 0} ** ${Number(VALUE2) || 0})`
+        return [code, javascriptGenerator.ORDER_NONE];
+    })
     
 }
 
