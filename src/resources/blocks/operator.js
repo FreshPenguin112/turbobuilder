@@ -147,7 +147,7 @@ function register() {
     }, (block) => {
         const VALUE1 = javascriptGenerator.valueToCode(block, 'VALUE1', javascriptGenerator.ORDER_ATOMIC);
         const VALUE2 = javascriptGenerator.valueToCode(block, 'VALUE2', javascriptGenerator.ORDER_ATOMIC)
-        const code = `(${Number(VALUE1) || 0} + ${Number(VALUE2) || 0})`
+        const code = `(${Number(VALUE1) || VALUE1 || 0} + ${Number(VALUE2) || VALUE2 || 0})`
         return [code, javascriptGenerator.ORDER_NONE];
     })
     // minus, 1.5 - 1
@@ -169,7 +169,7 @@ function register() {
     }, (block) => {
         const VALUE1 = javascriptGenerator.valueToCode(block, 'VALUE1', javascriptGenerator.ORDER_ATOMIC);
         const VALUE2 = javascriptGenerator.valueToCode(block, 'VALUE2', javascriptGenerator.ORDER_ATOMIC)
-        const code = `(${Number(VALUE1) || 0} - ${Number(VALUE2) || 0})`
+        const code = `(${Number(VALUE1) || VALUE1 || 0} - ${Number(VALUE2) || VALUE2 || 0})`
         return [code, javascriptGenerator.ORDER_NONE];
     })
     // times, 2 * 2
@@ -191,7 +191,7 @@ function register() {
     }, (block) => {
         const VALUE1 = javascriptGenerator.valueToCode(block, 'VALUE1', javascriptGenerator.ORDER_ATOMIC);
         const VALUE2 = javascriptGenerator.valueToCode(block, 'VALUE2', javascriptGenerator.ORDER_ATOMIC)
-        const code = `(${Number(VALUE1) || 0} * ${Number(VALUE2) || 0})`
+        const code = `(${Number(VALUE1) || VALUE1 || 0} * ${Number(VALUE2) || VALUE2 || 0})`
         return [code, javascriptGenerator.ORDER_NONE];
     })
     // divide, 10 / 2
@@ -213,7 +213,7 @@ function register() {
     }, (block) => {
         const VALUE1 = javascriptGenerator.valueToCode(block, 'VALUE1', javascriptGenerator.ORDER_ATOMIC);
         const VALUE2 = javascriptGenerator.valueToCode(block, 'VALUE2', javascriptGenerator.ORDER_ATOMIC)
-        const code = `(${Number(VALUE1) || 0} / ${Number(VALUE2) || 0})`
+        const code = `(${Number(VALUE1) || VALUE1 || 0} / ${Number(VALUE2) || VALUE2 || 0})`
         return [code, javascriptGenerator.ORDER_NONE];
     })
     // exponent, 5 ** 4
@@ -235,7 +235,7 @@ function register() {
     }, (block) => {
         const VALUE1 = javascriptGenerator.valueToCode(block, 'VALUE1', javascriptGenerator.ORDER_ATOMIC);
         const VALUE2 = javascriptGenerator.valueToCode(block, 'VALUE2', javascriptGenerator.ORDER_ATOMIC)
-        const code = `(${Number(VALUE1) || 0} ** ${Number(VALUE2) || 0})`
+        const code = `(${Number(VALUE1) || VALUE1 || 0} ** ${Number(VALUE2) || VALUE2 || 0})`
         return [code, javascriptGenerator.ORDER_NONE];
     })
 
