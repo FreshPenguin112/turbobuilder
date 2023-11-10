@@ -106,6 +106,23 @@ function register() {
         const code = `(${VALUE1 || 0} === ${VALUE2 || 0})`
         return [code, javascriptGenerator.ORDER_NONE];
     })
+    // tobool, Boolean(x)
+    registerBlock(`${categoryPrefix}tobool`, {
+        message0: '⠀%1⠀',
+        args0: [
+            {
+                "type": "input_value",
+                "name": "VALUE1"
+            },
+        ],
+        output: "Boolean",
+        inputsInline: true,
+        colour: categoryColor
+    }, (block) => {
+        const VALUE1 = javascriptGenerator.valueToCode(block, 'VALUE1', javascriptGenerator.ORDER_ATOMIC);
+        const code = `(Boolean(${VALUE1 || 0}))`
+        return [code, javascriptGenerator.ORDER_NONE];
+    })
     // join, "foo" + "bar"
     registerBlock(`${categoryPrefix}join`, {
         message0: 'join %1 , %2',

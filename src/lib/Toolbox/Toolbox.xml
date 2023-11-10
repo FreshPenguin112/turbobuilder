@@ -7,6 +7,7 @@
         <block type="operator_text" />
         <block type="operator_number" />
         <block type="operator_boolean" />
+        <block type="operator_tobool" />
         <block type="operator_equals" />
         <block type="operator_exactlyequals" />
         <block type="operator_join" />
