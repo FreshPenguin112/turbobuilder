@@ -1,6 +1,41 @@
 <xml>
     <category name="Control" colour="#FFAB19">
-        <block type="control_ifthen" />
-        <block type="control_ifthenelse" />
+        <block type="control_if" />
+        <block type="control_ifelse" />
+    </category>
+    <category name="Operators" colour="#59C059">
+        <block type="operator_text" />
+        <block type="operator_number" />
+        <block type="operator_boolean" />
+        <block type="operator_tobool" />
+        <block type="operator_equals" />
+        <block type="operator_exactlyequals" />
+        <block type="operator_join" />
+        <block type="operator_plus" />
+        <block type="operator_minus" />
+        <block type="operator_times" />
+        <block type="operator_divide" />
+        <block type="operator_exponent" />
+    </category>
+    <category name="Variables" colour="#FF8C1A">
+        <block type="variable_set" />
+        <block type="variable_get" />
+    </category>
+    <sep></sep>
+    <category name="Blocks" colour="#FF6680">
+        <block type="blocks_create" />
+        <block type="blocks_input" />
+        <sep gap="48"></sep>
+        <block type="blocks_get" />
+        <block type="blocks_return" />
+    </category>
+    <category name="Debug" colour="#666666">
+        <block type="debug_log" />
+        <block type="debug_warn" />
+        <block type="debug_error" />
+        <block type="debug_alert" />
+        <sep gap="48"></sep>
+        <block type="debug_rawblock" />
+        <block type="debug_raw" />
     </category>
 </xml>

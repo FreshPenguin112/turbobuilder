@@ -111,10 +111,12 @@
 
     function event() {
         // validate all
+        //alert(JSON.stringify(document.getElementById("workspace")));
         if (!state.block.id || !validation.id(state.block.id)) {
             return alert("Block ID is either invalid or not set.");
         }
         // set state
+        //alert(JSON.stringify(state));
         dispatch("completed", state);
         visible = false;
     }
@@ -144,6 +146,7 @@
         block.setMovable(false);
         block.setDeletable(false);
         console.log(block);
+        //alert(JSON.stringify(block));
 
         // center
         workspace.centerOnBlock(block.id, true);
